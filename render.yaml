@@ -3,7 +3,8 @@ services:
     name: n8n
     env: docker
     plan: starter
-    dockerfilePath: docker/Dockerfile  # Ruta correcta al Dockerfile
+    dockerfilePath: Dockerfile         # ahora está dentro de docker/
+    dockerContext: ./docker            # aquí indicamos dónde buscar
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
