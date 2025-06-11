@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: starter
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        sync: false
+      - key: N8N_HOST
+        value: n8n.onrender.com
+      - key: WEBHOOK_URL
+        value: https://n8n.onrender.com/
